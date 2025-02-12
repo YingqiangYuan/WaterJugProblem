@@ -1,10 +1,32 @@
+#*********************************************************************************#
+# FILE: Gallon Bukect Problem                                                     #
+#                                                                                 #
+# DESCRIPTION: This program solve the Gallon Bucket Problem.                      #
+# For example, 2 kids are trying to fetch 4 gallon of water from a streams.       #
+# They have only an unmarked 3 gallon bucket and an unmarked 5 gallon bucket.     #
+# They shoud be done with fetching 4 in 15 steps.                                 #
+# DEVELOPER: Yingqiang Yuan                                                       #
+# DEVELOPER PHONE: +1 (509) 288-2111                                              #
+# DEVELOPER EMAIL: yingqiang.yuan@gmail.com                                       #
+#                                                                                 #
+# VERSION: 1.0                                                                    #
+# CREATED DATE-TIME: 202502010-14:33 Pacfic Time Zone USA                         #
+#                                                                                 #
+# VERSION: 1.1                                                                    #
+# REVISION DATE-TIME: 20250211-16:54                                              #
+# DEVELOPER MAKING CHANGE: First_name Last_name                                   #
+# DEVELOPER MAKING CHANGE: PHONE: +1 (XXX) XXX-XXXX                               #
+# DEVELOPER MAKING CHANGE: EMAIL: first.last@email.com                            #
+#                                                                                 #
+# VERSION: 1.2                                                                    #
+# REVISION DATE-TimeL 20250212-02:21                                              #
+# ADD THE FEATUR WHERE TWO BUCKETS, TARGET VOLUME AND TARGET BUCKET ARE PARAMETER.#
+#*********************************************************************************#
+
 from collections import deque 
 
 def waterJugSolver(bucket1, bucket2, target, target_bucket):
     """
-    Solves the Water Jug Problem for two given bucket sizes.
-    Finds the shortest sequence of steps to reach the target amount in the chosen bucket.
-    
     Parameters:
     - bucket1 (int): Capacity of the first bucket.
     - bucket2 (int): Capacity of the second bucket.
@@ -54,8 +76,8 @@ def waterJugSolver(bucket1, bucket2, target, target_bucket):
     
     return f"Impossible to reach {goal_state}"
 
-# Example usage with a 5L and 3L bucket, aiming for 4L in bucket1
-solution = waterJugSolver(5, 3, 4, 1)
+# Example usage with a 5L and 3L bucket, aiming for 4L in bucket2
+solution = waterJugSolver(3, 5, 4, 2)
 
 if isinstance(solution, str):
     print(solution)
